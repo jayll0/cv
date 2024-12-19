@@ -1,3 +1,45 @@
+/* src/pages/HomePage.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "Quattrocento";
+  src: local("Quattrocento-Regular"),
+       url('./assets/font/Quattrocento-Regular.ttf') format('truetype');
+
+}
+.Quattrocento{
+  font-family:Quattrocento
+}
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat-Regular"),
+       url('./assets/font/Montserrat-Regular.ttf') format('truetype');
+
+}
+.Montserrat{
+  font-family: Montserrat
+}
+@font-face {
+  font-family: "MontserratBold";
+  src: local("Montserrat-Bold"),
+       url('./assets/font/Montserrat-Bold.ttf') format('truetype');
+
+}
+.MontserratBold{
+  font-family:MontserratBold
+}
+@media (max-width: 768px) {
+  .container {
+   
+    transform: scale(1); /* Atur nilai scale sesuai kebutuhan */
+    transform-origin: top left; /* Mengatur titik transformasi sesuai kebutuhan */
+  }
+}
+
+
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -5,21 +47,22 @@
 
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
+  background-color: #000000;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 a {
   font-weight: 500;
-  color: #646cff;
+  color: white;
   text-decoration: inherit;
 }
 a:hover {
-  color: #535bf2;
+  color: white;
 }
 
 body {
@@ -28,41 +71,47 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  background-color: black;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
 }
-
+/* Button styling */
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
+  border-radius: 40px; /* Corner radius sebesar 40px */
+  border: 2px solid #fff8f8; /* Border dengan ketebalan 2px dan warna putih */
   padding: 0.6em 1.2em;
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: rgba(0, 0, 0, 0.5); /* Latar belakang semi-transparan */
+  color: white;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all 0.3s ease; /* Transisi halus untuk perubahan efek hover */
+  box-shadow: 0 0 10px rgba(255, 251, 251, 0.5); /* Glow effect */
 }
+
 button:hover {
-  border-color: #646cff;
+  border-color: #ffffff; /* Mengubah warna border saat hover */
+  background-color: rgba(0, 0, 0, 0.7); /* Mengubah warna latar belakang saat hover */
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.7); /* Efek glow lebih kuat saat hover */
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+/* Responsive adjustments for light color scheme */
 @media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
   button {
-    background-color: #f9f9f9;
+    background-color: rgb(0, 0, 0); /* Mengubah latar belakang tombol */
+    box-shadow: 0 0 10px rgb(255, 255, 255); /* Glow effect dalam skema warna terang */
+  }
+  
+  button:hover {
+    box-shadow: 0 0 15px rgb(255, 255, 255); /* Efek glow lebih kuat saat hover dalam skema warna terang */
   }
 }

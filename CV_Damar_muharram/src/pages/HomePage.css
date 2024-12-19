@@ -1,0 +1,259 @@
+/* Container styling */
+.container {
+    max-width: 1200px;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Memastikan container mengisi seluruh tinggi viewport */
+    margin-left: 10%;
+    margin-right: 10%; /* Mengubah margin kanan agar konsisten */
+}
+
+/* Title styling */
+h2 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 16px;
+    text-align: center; /* Pastikan judul berada di tengah */
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+/* Flexbox layout for the home page */
+.homepage-flex {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    width: 100%; /* Pastikan flexbox mengambil seluruh lebar */
+    justify-content: space-between; /* Pusatkan konten secara horizontal */
+    align-items: center; /* Pusatkan konten secara vertikal */
+}
+
+/* Image styling */
+.homepage-image {
+    display: block;
+    margin: auto;
+    z-index: 2;
+    position: relative;
+    height: auto; /* Atur height agar otomatis */
+    border-radius: 8px; /* Mengatur border-radius gambar */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 600px; /* Mengatur batas maksimal lebar gambar */
+    margin-left: 0; /* Menghilangkan margin-left */
+    margin-right: 0; /* Menghilangkan margin-right */
+    margin-top: 1%; /* Margin atas untuk memberikan jarak dari elemen di atasnya */
+    outline: none; /* Menghilangkan efek outline saat gambar mendapatkan fokus */
+}
+
+.motion-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  .motion-circle,
+.motion-circle-2 {
+  position: absolute;
+  top: -14%;
+  left: -25%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* Text overlay for the left image */
+.text-overlay {
+    margin-left:50% fixed;
+    margin-right:50% fixed;
+
+    color: white;
+    transition: color 0.3s ease;
+    padding-right: 100% fixed;
+  }
+  /* Tambahkan styling untuk elemen dengan key "unique-key-for-overlay" */
+  .overlay-with-border {
+    border: 2px solid #fff8f8; /* Border dengan ketebalan 2px dan warna hitam */
+    border-radius: 40px fixed; /* Corner radius sebesar 40px */
+    margin-top: 0% fixed;
+    width: 62% fixed;
+    background-color: rgba(0, 0, 0, 0.5); /* Opsi tambahan untuk latar belakang semi-transparan */
+    color: white; /* Pastikan teks tetap terlihat */
+    margin-left: 12% ;
+    margin-right: 50% fixed;
+    transition: opacity 2s ease, transform 2s ease; /* Efek transisi */
+    outline: fixed; /* Menghilangkan efek outline saat tombol mendapatkan fokus */
+}
+
+.overlay-with-border:hover {
+    border-color: #ffffff fixed; /* Mengubah warna border saat hover */
+    background-color: rgba(0, 0, 0, 0.7) fixed; /* Mengubah warna latar belakang saat hover */
+    box-shadow: 0 0 15px #ffffff fixed; /* Menambahkan bayangan saat hover */
+    transition: opacity 2s ease, transform 2s ease; /* Efek transisi */
+    outline: nfixed; /* Menghilangkan efek outline saat tombol mendapatkan fokus */
+}
+.color2{
+    color:#00ff99;
+}
+/* Styling untuk top-text */
+.top-text {
+    font-size: 64.8px;
+    margin-left: 1%;
+    margin-right: 20%;
+}
+.top{
+    margin-top:-25%;
+}
+/* Styling untuk top2 */
+.top2 {
+    font-size: 34.8px;
+    padding-bottom: 10px;
+}
+
+/* Styling untuk bottom-text */
+.bottom-text {
+    bottom: 0;
+    font-size: 16px;
+    outline: none; /* Menghilangkan efek outline saat tombol mendapatkan fokus */
+}
+
+/* Styling untuk all */
+.all {
+    width: 100%;
+    margin-left: 25%;
+    margin-right: 25%; /* Mengubah margin kanan agar konsisten */
+}
+
+/* Styling untuk b */
+.b {
+    color: rgb(0, 0, 0);
+}
+
+/* Styling untuk button */
+.button {
+    color: #ffffff; /* Warna teks */
+    cursor: pointer; /* Mengubah cursor menjadi pointer */
+    text-decoration: none; /* Menghilangkan garis bawah pada teks */
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5); /* Bayangan pada teks */
+    transition: opacity 2s ease, transform 2s ease; /* Efek transisi */
+}
+
+.button:hover {
+    color: rgb(255, 255, 255); /* Warna teks saat di-hover */
+    text-shadow: 2px 2px 8px rgba(255, 255, 255, 0.8); /* Bayangan teks lebih terang saat di-hover */
+    text-decoration: underline; /* Garis bawah saat di-hover */
+}
+
+/* Awal state dengan transparansi dan posisi off-screen */
+.text-overlay {
+    opacity: 0; /* Mulai dari transparan */
+    transform: translateX(-10%); /* Posisi off-screen dari kiri */
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out; /* Efek transisi */
+}
+.text-overlay2 {
+    opacity: 0; /* Mulai dari transparan */
+    transform: translateX(-7%); /* Posisi off-screen dari kiri */
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out; /* Efek transisi */
+}
+/* Ketika elemen aktif (ketika halaman dimuat) */
+.text-overlay.active,
+.text-overlay.scroll-active {
+    opacity: 1; /* Tidak transparan */
+    transform: translateX(0); /* Kembali ke posisi awal */
+}
+/* Ketika elemen aktif (ketika halaman dimuat) */
+.text-overlay2.active,
+.text-overlay2.scroll-active {
+    opacity: 1; /* Tidak transparan */
+    transform: translateX(0); /* Kembali ke posisi awal */
+}
+
+/* Media query untuk layar kecil */
+@media (max-width: 768px) {
+    .homepage-flex {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-overlay {
+        margin-bottom: 10px;
+    }
+}
+
+
+.home {
+    position: relative;
+    width: 100%;
+    justify-content: space-between;
+    height: 100vh;
+    background: url(https://i.pinimg.com/750x/3c/58/64/3c586468a82f52766d2f338760a05b2f.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 70px 10% 0;
+}
+
+
+.home-sci a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #00ff99;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #00ff99;
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+}
+
+
+.home-sci a:hover {
+    background: #00ff99;
+    color: black;
+    box-shadow: 0 0 20px #00ff99;
+}
+
+@media screen and (max-width: 767px){
+    .bottom-text {
+        bottom: 0;
+        font-size: 16px;
+        outline: none; /* Menghilangkan efek outline saat tombol mendapatkan
+         fokus */
+         margin-left: -20%;
+    }
+    .homepage-image {
+        display: block;
+        margin: auto;
+        z-index: 2;
+        position: relative;
+        height: auto; /* Atur height agar otomatis */
+        border-radius: 8px; /* Mengatur border-radius gambar */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        max-width: 600px; /* Mengatur batas maksimal lebar gambar */
+        margin-left: -14%; /* Menghilangkan margin-left */
+        margin-right: 0; /* Menghilangkan margin-right */
+        margin-top: 1%; /* Margin atas untuk memberikan jarak dari elemen di atasnya */
+        outline: none; /* Menghilangkan efek outline saat gambar mendapatkan fokus */
+    }
+    
+.motion-circle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+  }
+  .motion-circle,
+.motion-circle-2 {
+  position: absolute;
+  top: -14%;
+  left: -39%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+}

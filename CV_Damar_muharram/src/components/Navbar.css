@@ -1,0 +1,115 @@
+/* CSS for desktop and larger devices */
+@media screen and (min-width: 800px) {
+  .navbar ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    padding: 0;
+   
+  }
+
+  .navbar {
+    background-color: transparent;
+    color: #fff;
+    padding: 5px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    margin-left: -35.5%;
+    position: fixed;
+  }
+  
+  .navbar li {
+    margin: 0 16px;
+  }
+
+  .navbar button {
+    background: black;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar button:focus {
+    outline: none;
+  }
+
+  .navbar button:hover {
+    color: #6e6c6c;
+  }
+  .navbar button:focus {
+    outline: none;
+  }
+
+  .navbar button:hover {
+    color: #6e6c6c;
+  }
+}
+/* CSS for mobile (HP) *//* CSS for mobile (HP) */
+/* CSS for mobile (HP) */
+@media screen and (max-width: 800px) {
+ 
+  
+  .navbar {
+    background-color: transparent;
+    color: #fff;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    z-index: 50;
+    margin: 0;
+    outline: none;
+  }
+
+  .navbar ul {
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    outline: none;
+  }
+
+  .navbar li {
+    margin: 0;
+    outline: none;
+    position: relative;
+  }
+
+  .navbar a {
+    position: relative;
+    display: block;
+    text-align: center;
+    line-height: 75px;
+    font-size: 1.5em;
+    color: #fff;
+    transition: 0.5s;
+  }
+
+  .navbar a .icon {
+    font-size: 1.5em;
+    transition: 0.5s;
+  }
+
+  .navbar a .text {
+    position: absolute;
+    top: 45px;
+    width: 100%;
+    font-size: 0.75em;
+    letter-spacing: 0.05em;
+    color: var(--clr);
+    transition: 0.5s;
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+
+}
+

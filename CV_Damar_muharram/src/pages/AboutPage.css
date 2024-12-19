@@ -1,0 +1,49 @@
+.About-container {
+    display: flex;
+    align-items: center; /* Mengatur gambar dan teks sejajar secara vertikal */
+    gap: 20px; /* Jarak antara teks dan gambar */
+    ;
+    margin-left:37%;
+    margin-top:-24%;
+  }
+  
+  .About-text {
+    flex: 1; /* Teks akan mengambil ruang yang tersisa */
+    
+  }
+  .x {
+    max-width: 340px; /* Batasi lebar maksimum elemen menjadi 600px */
+  }
+  
+  .z {
+
+    width: 400px; /* Batasi lebar maksimum elemen menjadi 1200px */
+    padding-right: 25%; /* Menambahkan padding di sisi kanan elemen */
+    margin-left:-9%;
+  }
+  
+  .Rightimage {
+    margin-top:11%;
+    max-width: 300px; /* Batasan lebar gambar */
+    height: auto;
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-right:-30%;
+  }
+  
+  @media (max-width: 768px) {
+    .About-container {
+      flex-direction: column; /* Pada layar kecil, teks dan gambar berada di atas satu sama lain */
+      margin-left: 10%;
+    }
+  
+    .Rightimage {
+      max-width: 200px; /* Gambar memenuhi lebar layar pada perangkat kecil */
+      margin-right: -70%;
+      margin-top: -55%;
+      padding-left: 80%;
+    }
+  }
+.downimage{
+    margin-bottom: -20%;
+}

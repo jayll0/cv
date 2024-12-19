@@ -1,0 +1,155 @@
+.background-container {
+    max-height: 1000px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 100px;
+    padding-left: 30px;
+    
+
+}
+
+.background-section {
+    width: 300px;
+    max-width: 600px;
+    margin-bottom: -35%;
+    margin-right: auto;
+
+}
+
+.image-style {
+    margin-bottom: -20px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin-bottom: 7%;
+    top: -60px; /* Use 'top' to move the image upwards */
+    position: relative; /* Added to manage positioning */
+}
+.s2{
+    margin-bottom: -65%;
+
+}
+.mini-t {
+    padding:-20px;
+    color: #868686;
+    font-size: 15px;
+    margin-left: 20px;
+    
+}
+
+.sub-t {
+    padding:-20px;
+    font-size: 15.8px;
+    margin-left: -50%;
+    margin-right: auto;
+    text-align: center;
+}
+
+.title {
+    font-size: 48.8px;
+    margin-left: -100%;
+    width: 100%;
+    margin-bottom: 20px;
+
+}
+
+.mt-4 {
+    margin-top: 16px;
+}
+
+.all{
+    margin-right: -50%;
+}
+.sec-desc{
+    margin-right: -50%;
+    
+}
+.s{
+    margin-right: -49%;
+
+}
+
+.x{
+    margin-bottom: -10%;
+}
+.k{
+    margin-bottom: 0px;
+}
+.desc{
+    margin-bottom: 105%;
+}
+
+/* Mobile Styles */
+@media only screen and (max-width: 700px) {
+    .background-container {
+      padding-top: 50px;
+      padding-left: 10px;
+      max-height: auto;
+    }
+  
+    .background-section {
+      width: 100%;
+      margin-bottom: -20%;
+      margin-right: 0;
+    }
+  
+    .image-style {
+      top: -90px; /* Adjust top for better positioning */
+      width: 4%;
+      margin-left: -5%;
+      margin-right: auto;
+        margin-bottom: -203px;
+    }
+  
+    .title {
+      font-size: 32px;
+      margin-left: 0;
+      text-align: center;
+    }
+  
+    .sub-t {
+      font-size: 20px;
+      margin-left: 0;
+      text-align: left;
+      margin-bottom: -10px;
+  
+    }
+  
+    .mini-t {
+      font-size: 20px;
+      margin-left: 0;
+      padding-left: 10px;
+      margin-bottom: -20%;
+      max-width: 1000px;
+       
+    }
+  
+    .desc {
+      margin-bottom: 50%;
+    }
+  
+    .sec-desc {
+      margin-right: 0;
+    }
+  
+    .s {
+      margin-bottom: -10%;
+    }
+  
+
+  
+    .k {
+      margin-bottom: 10%;
+    }
+  
+    .all {
+      margin-right: 0;
+    }
+  
+    .mt-4 {
+      margin-top: 10px;
+    }
+  }
+  

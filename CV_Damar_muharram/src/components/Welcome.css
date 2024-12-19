@@ -1,0 +1,42 @@
+.welcome-text {
+  font-size: 1.2rem; /* Menyesuaikan ukuran font */
+  color: white;
+  background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+  padding: 20px;
+  border-radius: 100px;
+  width: 90%; /* Lebar lebih luas */
+  max-width: 800px; /* Maksimal lebar diperbesar */
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transform: translateY(-20px); /* Mulai sedikit di atas tampilan */
+  transition: opacity 1.5s ease, transform 1.5s ease;
+  position: fixed; /* Posisi tetap agar selalu terlihat */
+  top: 10px; /* Sesuaikan jika diperlukan */
+  left: 50%;
+  transform: translateX(-50%) translateY(-20px); /* Pusatkan secara horizontal dan sedikit di luar layar */
+  z-index: 1000; /* Pastikan berada di atas konten lain */
+}
+
+.welcome-text.scroll-active {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0); /* Geser masuk dan menjadi sepenuhnya terlihat */
+}
+
+@media (min-width: 768px) {
+  .welcome-text {
+    font-size: 1.5rem; /* Sesuaikan ukuran font untuk layar yang lebih besar */
+    padding: 25px; /* Padding lebih besar */
+    top: 20px; /* Sesuaikan posisi atas */
+    width: 85%; /* Lebar lebih luas untuk layar lebih besar */
+    max-width: 900px; /* Maksimal lebar diperbesar */
+  }
+}
+
+@media (min-width: 480px) {
+  .welcome-text {
+    font-size: 1.2rem; /* Sesuaikan ukuran font untuk layar sangat kecil */
+    padding: 15px; /* Padding yang disesuaikan */
+    width: 90%; /* Lebar lebih luas untuk layar kecil */
+  }
+}

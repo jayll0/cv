@@ -1,35 +1,66 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React, { useRef, useEffect, useState } from 'react';
+import Navbar from './components/Navbar';
+import HomePage from './pages/HomePage';
+import GalleryPage from './pages/GalleryPage';
+import BackgroundPage from './pages/BackgroundPage';
+import AboutPage from './pages/AboutPage';
 
-function App() {
-  const [count, setCount] = useState(0)
+const App = () => {
+  const [activeIndex, setActiveIndex] = useState(null);
+  const homeRef = useRef(null);
+  const galleryRef = useRef(null);
+  const backgroundRef = useRef(null);
+  const aboutRef = useRef(null);
+
+  const sectionRefs = {
+    home: homeRef,
+    about: aboutRef,
+    background: backgroundRef,
+    gallery: galleryRef
+  };
+
+  const scrollToSection = (section) => {
+    sectionRefs[section]?.current.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  useEffect(() => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const index = Object.keys(sectionRefs).indexOf(entry.target.id);
+          setActiveIndex(index);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    Object.values(sectionRefs).forEach(ref => {
+      if (ref.current) observer.observe(ref.current);
+    });
+
+    return () => {
+      Object.values(sectionRefs).forEach(ref => {
+        if (ref.current) observer.unobserve(ref.current);
+      });
+    };
+  }, []);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+    <div>
+      <Navbar scrollToSection={scrollToSection} sections={Object.keys(sectionRefs)} activeIndex={activeIndex} />
+      <div ref={homeRef} id="home" className="section">
+        <HomePage scrollToSection={scrollToSection} />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div ref={aboutRef} id="about" className="section">
+        <AboutPage />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
+      <div ref={backgroundRef} id="background" className="section">
+        <BackgroundPage />
+      </div>
+      <div ref={galleryRef} id="gallery" className="section">
+        <GalleryPage />
+      </div>
+    </div>
+  );
+};
 
-export default App
+export default App;

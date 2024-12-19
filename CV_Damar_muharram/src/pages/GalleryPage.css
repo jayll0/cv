@@ -1,0 +1,111 @@
+.containerp {
+    padding-top: 200px; /* Hilangkan padding atas jika ada */
+    margin-top: 500px; /* Margin atas sesuai dengan permintaan */
+    width: 100%; /* Pastikan kontainer memanfaatkan lebar penuh halaman */
+    box-sizing: border-box; /* Sertakan padding dan border dalam lebar elemen */
+    margin-left: 40%;
+}
+
+.gallery-item {
+    display: flex;
+    align-items: center;
+    gap: 16px; /* Jarak antara gambar dan teks */
+    margin-bottom: 16px;
+
+}
+
+.gallery-item2 {
+    display: flex;
+    align-items: center;
+    gap: 16px; /* Jarak antara gambar dan teks */
+    margin-bottom: 190px;
+    margin-left: 27%;
+    margin-top: 2.5%;
+}
+
+.text-content {
+    max-width: 600px; /* Lebar maksimum dari teks agar tidak terlalu panjang */
+    
+}
+
+.text-title {
+    font-size: 37.5px;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    margin-top: -3%;
+    padding-left: 3%;
+}
+
+
+.text-title2 {
+    font-size: 26.3px;
+    text-decoration: none; /* Menghilangkan garis bawah default */
+    color: inherit; /* Memastikan warna teks mengikuti gaya yang ada */
+    transition: text-decoration 0.3s ease; /* Transisi halus untuk garis bawah */
+}
+
+/* Menambahkan garis bawah saat tautan di-hover */
+.text-title2:hover,
+.text-title2:focus {
+    text-decoration: underline; /* Garis bawah saat hover atau fokus */
+}
+
+/* Garis bawah saat tautan aktif */
+.text-title2:active {
+    text-decoration: underline; /* Garis bawah saat diklik */
+}
+
+@media (max-width: 768px) {
+    .containerp {
+        padding-top: 0px; /* Hilangkan padding atas jika ada */
+        margin-top: 500px; /* Margin atas sesuai dengan permintaan */
+        width: 100%; /* Pastikan kontainer memanfaatkan lebar penuh halaman */
+        box-sizing: border-box; /* Sertakan padding dan border dalam lebar elemen */
+        margin-left: 40%;
+    }
+    /* Untuk tampilan mobile, gambar dan teks ditampilkan vertikal */
+    .gallery-item {
+        flex-direction: column;
+        text-align: center;
+        margin-left: -40%;
+    }
+
+    .text-content {
+        max-width: 100%; /* Sesuaikan lebar teks untuk mobile */
+        
+    }
+    .gallery-item2 {
+        display: flex;
+        align-items: center;
+        gap: 16px; /* Jarak antara gambar dan teks */
+        margin-bottom: 190px;
+        margin-left: 8%;
+        margin-top: 2.5%;
+    }
+    
+.text-title2 {
+    font-size: 26.3px;
+    text-decoration: none; /* Menghilangkan garis bawah default */
+    color: inherit; /* Memastikan warna teks mengikuti gaya yang ada */
+    transition: text-decoration 0.3s ease; /* Transisi halus untuk garis bawah */
+}
+.text-title {
+    font-size: 37.5px;
+    margin-bottom: 5%;
+    margin-left: 10%;
+    margin-top: -3%;
+    padding-left: 0%;
+    padding-right: 7%;
+}
+
+}
+
+/* Tambahan styling untuk memastikan konten di dalam kontainer sesuai */
+.containerp > * {
+    max-width: 100%; /* Pastikan elemen di dalam kontainer tidak melebihi lebar kontainer */
+    box-sizing: border-box; /* Sertakan padding dan border dalam lebar elemen */
+}
+
+.slide-above {
+    margin-bottom: 0; /* Sesuaikan jarak bawah dari slide atas */
+}
