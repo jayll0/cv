@@ -10,7 +10,7 @@ const Welcome = () => {
     // Initialize Typed.js with a delay of 3 seconds
     const timer = setTimeout(() => {
       new Typed(typedRef.current, {
-        strings: ["Who is Arya?"],
+        strings: ["Who is Damar?"],
         typeSpeed: 150,
 
 

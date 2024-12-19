@@ -3,7 +3,7 @@ import React, { useEffect } from 'react';
 import Welcome from '../components/Welcome.jsx';
 import { motion } from 'framer-motion';
 import { FaLinkedin, FaWhatsapp, FaEnvelope } from 'react-icons/fa';
-import homeimg2 from '../assets/images/home/my_photo.svg';
+import homeimg2 from '../assets/images/home/my_photo.jpg';
 import './HomePage.css'; 
 import './AboutPage.css'; 
 
@@ -39,7 +39,7 @@ const HomePage = ({ scrollToSection }) => {
         <div className="relative flex-1">
           {/* Teks di atas gambar kiri */}
           <div className="b text-overlay top-text">___________________</div>
-          <div className="top top-text text-overlay Quattrocento">Arya Wijaya</div>
+          <div className="top top-text text-overlay Quattrocento">Damar Muharram</div>
           
           {/* Bagian yang menampilkan teks "I am a" dan animasi Typed.js berdampingan */}
           <div className="top-text top2 text-overlay flex-row Quattrocento">
@@ -47,13 +47,13 @@ const HomePage = ({ scrollToSection }) => {
            
             <Welcome />
             <div className="home-sci">
-        <a href="https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=aryawijaya6664@gmail.com" target="_blank" rel="noopener noreferrer">
+        <a href="#" target="_blank" rel="noopener noreferrer">
           <FaEnvelope />
         </a>
-        <a href="https://wa.link/w5jijv" target="_blank" rel="noopener noreferrer">
+        <a href="#" target="_blank" rel="noopener noreferrer">
           <FaWhatsapp />
         </a>
-        <a href="https://www.linkedin.com/in/arya-wijayaprogrammer" target="_blank" rel="noopener noreferrer">
+        <a href="#" target="_blank" rel="noopener noreferrer">
           <FaLinkedin />
         </a>
       </div>
@@ -65,7 +65,7 @@ const HomePage = ({ scrollToSection }) => {
               <button
                 className="text-overlay bottom-text overlay-with-border Montserrat"
                 
-              ><a href="https://drive.google.com/file/d/1ArmxWjgdUsmu-68T5Q_zvfnKYZu6OHvr/view?usp=sharing">  Download CV</a>
+              ><a href="#">  Download CV</a>
               </button>
       
         </div>
@@ -92,7 +92,7 @@ const HomePage = ({ scrollToSection }) => {
               cx="200" // Menyesuaikan posisi pusat
               cy="200" // Menyesuaikan posisi pusat
               r="190" // Mengurangi radius agar lebih kecil dari viewBox
-              stroke="#00ff99"
+              stroke="#00ffea"
               strokeWidth="4"
               strokeLinecap="round"
               strokeLinejoin="round"

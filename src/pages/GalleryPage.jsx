@@ -19,7 +19,7 @@ const GalleryPage = () => {
         <div className="gallery-item2 text-overlay">
           <img src={galeryimg} alt="Gallery Image 1" className="w-full h-auto rounded-lg shadow-lg" />
           <div className="text-content">
-            <a href="https://github.com/jayll0" className="text-title2 text-overlay Montserrat">
+            <a href="#" className="text-title2 text-overlay Montserrat">
                   My GitHub
             </a>
           </div>
