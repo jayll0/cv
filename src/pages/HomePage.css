@@ -94,7 +94,7 @@ h2 {
     outline: nfixed; /* Menghilangkan efek outline saat tombol mendapatkan fokus */
 }
 .color2{
-    color:#00ff99;
+    color:#00ffea;
 }
 /* Styling untuk top-text */
 .top-text {
@@ -203,19 +203,19 @@ h2 {
     width: 40px;
     height: 40px;
     background: transparent;
-    border: 2px solid #00ff99;
+    border: 2px solid #00ffea;
     border-radius: 50%;
     font-size: 20px;
-    color: #00ff99;
+    color: #00ffea;
     text-decoration: none;
     margin: 30px 15px 30px 0;
 }
 
 
 .home-sci a:hover {
-    background: #00ff99;
+    background: #00ffea;
     color: black;
-    box-shadow: 0 0 20px #00ff99;
+    box-shadow: 0 0 20px #00ffea;
 }
 
 @media screen and (max-width: 767px){

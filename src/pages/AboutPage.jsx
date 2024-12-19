@@ -1,5 +1,7 @@
 import React from 'react';
 import Welcome2 from '../components/Welcome2.jsx';
+
+import about2 from '../assets/images/about/Vector.png';
 import './AboutPage.css'; 
 
 const AboutPage = () => {
@@ -9,15 +11,12 @@ const AboutPage = () => {
         <div className="About-text">
         <h2 className="text-2xl font-bold mb-4  z Quattrocento"><Welcome2 /></h2>
           <p className="text-lg x Montserrat">
-            I'm Arya Wijaya, an Informatics student at Telkom University with a passion for solving web development challenges.  
-          
-            Currently, I'm diving into both front-end and back-end development, with hands-on experience from projects like CCI The Hack Event.  
-          
-            I'm excited to be at the start of my career in software development, constantly seeking new opportunities to grow and contribute to innovative projects.
-          </p>
+          Saya mempunyai  beberapa keahlian bahasa pemograman, Saya mempunyai softskill pada  Kerjasama Tim, Pemecahan 
+Masalah, dan Kemampuan Adaptasi. Tertarik di bidang full stack, mengikuti perkembangan teknologi, dan mengikuti 
+courses tentang programming </p>
           <img src={about2} alt="About Image" className="downimage" />
         </div>
-        <img src={about} alt="About Image" className="Rightimage" />
+
       </div>
     </div>
   );

@@ -12,12 +12,12 @@
     
   }
   .x {
-    max-width: 340px; /* Batasi lebar maksimum elemen menjadi 600px */
+    max-width: 700px; /* Batasi lebar maksimum elemen menjadi 600px */
   }
   
   .z {
 
-    width: 400px; /* Batasi lebar maksimum elemen menjadi 1200px */
+    width:650px; /* Batasi lebar maksimum elemen menjadi 1200px */
     padding-right: 25%; /* Menambahkan padding di sisi kanan elemen */
     margin-left:-9%;
   }

@@ -6,7 +6,7 @@ const TypeAnimation = () => {
   return (
     <span className="text-accent color2">
       <Typewriter
-        words={['Developer', 'Programmer', 'Problem Solver']}
+        words={['Hello im damar', 'become to Fullstack']}
         loop={Infinity}
         cursor
         cursorStyle="|"
